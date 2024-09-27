@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "373930403606",
+    "project_id": "alpine-eon-436902-c3",
+    "storage_bucket": "alpine-eon-436902-c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373930403606:android:0b741686f1a674313dd237",
+        "android_client_info": {
+          "package_name": "com.hacoding.firebasegoogleauth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn3Ge0nyIxAKTC4cS_G_o5h54O7tLpkRQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
