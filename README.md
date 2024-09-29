@@ -6,5 +6,5 @@
 4. 3번 설정값을 기반으로 앱에서 Firebase 로그인 설정
 
 #### 참고 사이트 ####
-- https://firebase.google.com/docs/auth/android/start?hl=ko
-- https://www.youtube.com/watch?v=zCIfBbm06QM&themeRefresh=1
+- https://firebase.google.com/docs/auth/android/start
+- https://www.youtube.com/watch?v=zCIfBbm06QM
