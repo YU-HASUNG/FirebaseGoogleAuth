@@ -68,7 +68,15 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    //Compose Navigation
+    implementation(libs.androidx.navigation.compose)
+
     //Firebase auth
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
+    implementation (libs.play.service.auth)
+    implementation (libs.firebase.auth)
+
+    //image
+    implementation (libs.coil)
 }

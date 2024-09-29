@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">firebaseGoogleAuth</string>
+    <string name="web_client_id">373930403606-q2juq98f51oa0lqdohleajvag5f2c8t4.apps.googleusercontent.com</string>
 </resources>
