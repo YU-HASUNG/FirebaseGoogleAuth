@@ -77,6 +77,9 @@ dependencies {
     implementation (libs.play.service.auth)
     implementation (libs.firebase.auth)
 
+    //Firebase Function
+    implementation(libs.firebase.functions)
+
     //image
     implementation (libs.coil)
 }

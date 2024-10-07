@@ -33,6 +33,7 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebase-auth = { module = "com.google.firebase:firebase-auth-ktx", version.ref = "firebaseAuth" }
+firebase-functions = { module = "com.google.firebase:firebase-functions" }
 play-service-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
 coil = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
