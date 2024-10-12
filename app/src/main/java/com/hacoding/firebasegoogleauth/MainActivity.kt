@@ -123,7 +123,9 @@ class MainActivity : ComponentActivity() {
 
                                 Spacer(modifier = Modifier.height(16.dp))
 
+                                //helloWorld firebase function
                                 FunctionScreen(
+                                    title = "helloWorld",
                                     functionClick = {
                                         functions = FirebaseFunctions.getInstance("asia-northeast3") // 지역을 명시해 주세요
                                         functions
@@ -137,6 +139,42 @@ class MainActivity : ComponentActivity() {
                                                 } else {
                                                     Log.e("hasung", "Function call failed", task.exception)
                                                     Toast.makeText(applicationContext, "Function call failed", Toast.LENGTH_SHORT).show()
+                                                }
+                                            }
+                                    }
+                                )
+
+                                //유저 리스트 가져오는 firebase function
+                                FunctionScreen(
+                                    title = "getUserList",
+                                    functionClick = {
+                                        val functions = FirebaseFunctions.getInstance("asia-northeast3") // 지역 설정
+                                        functions
+                                            .getHttpsCallable("getUserList")
+                                            .call()
+                                            .addOnCompleteListener { task ->
+                                                if (task.isSuccessful) {
+                                                    val result = task.result?.data as? Map<*, *>  // 응답 데이터 Map 형태로 캐스팅
+                                                    val success = result?.get("success") as? Boolean ?: false
+                                                    val message = result?.get("message") as? String ?: "No data"
+
+                                                    if (success) {
+                                                        val users = result?.get("users") as? List<Map<String, Any>>
+                                                        if (users != null) {
+                                                            // 사용자 목록을 처리
+                                                            for (user in users) {
+                                                                val uid = user["uid"] as? String
+                                                                val email = user["email"] as? String
+                                                                Log.d("hasung", "User ID: $uid, Email: $email")
+                                                            }
+                                                        }
+                                                    }
+
+                                                    // 성공 메시지 표시
+                                                    Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT).show()
+                                                } else {
+                                                    Log.e("hasung", "Function call failed", task.exception)
+                                                    Toast.makeText(applicationContext, "Function call failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
                                                 }
                                             }
                                     }

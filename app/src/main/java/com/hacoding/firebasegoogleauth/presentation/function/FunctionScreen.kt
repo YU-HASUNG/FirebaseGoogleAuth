@@ -12,6 +12,7 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun FunctionScreen(
+    title: String,
     functionClick: () -> Unit
 ) {
     Box(
@@ -21,7 +22,7 @@ fun FunctionScreen(
         contentAlignment = Alignment.Center
     ) {
         Button(onClick = functionClick) {
-            Text(text = "call function")
+            Text(text = title)
         }
     }
 }
